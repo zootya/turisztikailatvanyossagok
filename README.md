@@ -20,11 +20,11 @@ A fejlesztési kaland elindításához kövesse az alábbi egyszerű lépéseket
 
 **Klónozza ezt a tárolót**
 
-```git clone https://github.com/zootya/ermekatalogus.git```
+```git clone https://github.com/zootya/turisztikailatvanyossagok.git```
 
 **Keresse meg a tárolót**
 
-```cd ermekatalogus```
+```cd turisztikailatvanyossagok```
 
 **Telepítse a függőségeket**
 
