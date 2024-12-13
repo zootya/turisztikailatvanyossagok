@@ -1,2 +1,16 @@
 # TODO List
 - [ ] GIThub repó létrehozása <br>
+- [ ] local fejleszői környezet kialakítása django, djangorestframework<br>
+- [ ] Django szerver beállítása a Docker konténerbe<br>
+- [ ] külső ip címről elérhető legyen<br>
+- [ ] modell kialakítása normalizálása<br>
+- [ ] szerver oldaki adatbevitelhet template elkészítése<br>
+- [ ] serializer létrehozása<br>
+- [ ] GET API végpont elkészítése<br>
+- [ ] POST API végpont elkészítése<br>
+- [ ] local fejlesztői környezet Vite létrehozása a felhasználói felülethez<br>
+- [ ] Vite szerver beállítása egy Docker konténerbe
+- [ ] felhasználói főoldal létrehozása az adatok megjelenítésére<br>
+- [ ] felhasználói oldal létrehozása az adat beviteli ürlaphoz<br>
+- [ ]  <br>
+- [ ]  <br>
