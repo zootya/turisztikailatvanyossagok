@@ -26,7 +26,7 @@ RUN chmod 755 /app
 USER app
 
 # konténer portjának megadása
-EXPOSE 8000
+#EXPOSE 8000
 
 # konténer indításakor futtatandó parancs
 CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000" ]
