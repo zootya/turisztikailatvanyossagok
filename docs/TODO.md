@@ -1,6 +1,6 @@
 # TODO List
 - [x] GIThub repó létrehozása
-- [ ] local fejleszői környezet kialakítása django, djangorestframework, django-cors-headers, sqlite3 migrate
+- [x] local fejleszői környezet kialakítása django, djangorestframework, django-cors-headers, sqlite3 migrate
 - [ ] Django szerver beállítása a Docker konténerbe
 - [ ] külső ip címről elérhető legyen
 - [ ] modell kialakítása normalizálása
