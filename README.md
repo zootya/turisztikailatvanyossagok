@@ -8,7 +8,8 @@
 ## 📚 Tech Stack
 
 - Python 3.13.1
-- Django 5.1.2
+- Django 5.1.4
+- Django REST framework 3.15.2
 - NodeJs
 - React
 - Vite
