@@ -1,10 +1,10 @@
-# TODO List
+# Primary TODO List 
 - [x] GIThub repó létrehozása
 - [x] local fejleszői környezet kialakítása django, djangorestframework, django-cors-headers, sqlite3 migrate
 - [x] Django szerver beállítása a Docker konténerbe
 - [x] külső ip címről elérhető legyen
 - [x] modell kialakítása, normalizálása
-- [ ] szerver oldali adatbevitelhez template, forms elkészítése
+- [x] szerver oldali adatbevitelhez template, forms elkészítése
 - [ ] serializer létrehozása
 - [ ] GET API végpont elkészítése
 - [ ] POST API végpont elkészítése
@@ -15,4 +15,5 @@
 - [ ] programfejlesztői dokumentáció elkészítése
 - [ ] működésének műszaki feltételeit és használatának rövid bemutatását tartalmazó dokumentáció elkészítése a felhasználók részére
 
+## Secondary TODO List
 - [ ] ujvaros.html a select ország abc sorrendben jelenjen meg
