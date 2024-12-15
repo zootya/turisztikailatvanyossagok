@@ -3,8 +3,8 @@
 - [x] local fejleszői környezet kialakítása django, djangorestframework, django-cors-headers, sqlite3 migrate
 - [x] Django szerver beállítása a Docker konténerbe
 - [x] külső ip címről elérhető legyen
-- [ ] modell kialakítása, normalizálása
-- [ ] szerver oldali adatbevitelhez template elkészítése
+- [x] modell kialakítása, normalizálása
+- [ ] szerver oldali adatbevitelhez template, forms elkészítése
 - [ ] serializer létrehozása
 - [ ] GET API végpont elkészítése
 - [ ] POST API végpont elkészítése

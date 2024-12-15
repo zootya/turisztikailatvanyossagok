@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block section %}
+    <div class="bg-light mb-5 mt-5 p-3">
+        <h1 class="text-center">Ha levelet szeretnél küldeni:</h1>
+        <hr>
+        <div class="text-center" style="font-size: 3em;">
+           <div class="badge bg-primary">
+               <p>{{ kapcsolatiAdatok.nev }}</i>
+               <p>{{ kapcsolatiAdatok.email }}</i>
+           </div>
+        </div>
+        <hr>
+    </div>
+{% endblock section %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block section %}
+    <div class="bg-light mb-5 mt-5 p-3">
+        <h1 class="text-center">Backend 2. beadandó feladat</h1>
+        <br>
+        <h2 class="text-center">Turisztikai látványosságok<br>REST API backend feladat</h2>
+        <br>
+        Felkértek arra, hogy készíts backend-et különféle turisztikai látványosságok tárolásához.<br>
+        A következőket szeretnéd tárolni a látványosságokról:
+        <ul>
+            <li>Ország</li>
+            <li>Város</li>
+            <li>Látványosság neve</li>
+            <li>Rövid leírása</li>
+            <li>Átlagos értékelése 1-5 között tizedestörttel <i>(itt elég az átlagos értékelés beírása, de ha nagy ambíciód van, 
+                és sok időt tudsz rászánni, akkor meg lehet oldani egy értékelési felületet is hozzá, ahol egyesével lehet a 
+                látványosságokat értékelni. De ez semmiképpen nem kötelező feladat, mert sokkal több időt vesz igénybe)</i>.</li>
+            <li>Nyitvatartási idő szövegesen (a formátum rád van bízva, pl. H-P: 8-20, SZ-V: 8-22)</li>
+            <li><i>Nem kötelező: internetes URL, amely egy képet ad meg a látványossághoz. Szintén nem kötelező, 
+                de utána nézhetsz esetleg, hogy képet hogyan tudsz az adatbázisba elmenteni. Ez még órán nem került elő, 
+                de ha kedved van, megpróbálhatod.</i></li>
+        </ul>
+        
+        <ol>
+            <li>Hozd létre a backend projektet, azon belül az appot, és végezd el az inicializálás lépéseit 
+                (django, djangorestframework telepítése, migrate, superuser,…)</li>
+            <li>Hozd létre a modelleket úgy, hogy minél inkább normalizált legyen az adatbázis, tehát legyen külön modell:
+                <ul>
+                    <li>Az országok</li>
+                    <li>A városok</li>
+                    <li>És a látványosságok tárolásához és ezeket kapcsold össze idegen kulcs segítségével! 
+                        A fő modelled a látványosságok tárolására használt modell.</li>
+                </ul>
+            </li>    
+            <li>Hozd létre a serializer-t a látványosságok tárolására használt modellhez! Oldd meg a depth beállításának a segítségével, hogy látszódjanak a városok és az országok is a látványosságokhoz!</li>
+            <li>Hozz létre egy GET API végpontot, amely lekérdezi az összes látványosság adatát és JSON formátumban visszaadja.</li>
+            <li>Hozz létre POST API végpontot, amely a request data segítségével megkapja az űrlapból bevitt adatokat, és az adatbázisba elmenti az adatokat. A válasz visszaadása rád van bízva, 
+                lehet visszaadni a bevitt adatot JSON válaszként, vagy visszairányíthat a főoldalra.</li>
+            <li>Hozz létre 2 frontend oldalt, amely közül az egyik a főoldal lesz, amely megjeleníti a bevitt látványosságokat, 
+                a másikon pedig űrlapon be lehet vinni a látványosság adatait. Az oldalon az országos és városok bevitelét is 
+                próbáld megoldani külön űrlappal, de ha nem marad idő, elfogadható az is, ha a Django admin felületén viszed be, 
+                itt pedig legördülő listából lehet választani.</li>
+            <li>A főoldalon JavaScript fetch segítségével kérd le a GET végpontról az adatokat, és JS segítségével töltsd fel az oldalra az adatokat (az órai példákból ehhez tudsz segítséget nézni). 
+                A megjelenítés rád van bízva, lehet táblázat, flexbox, Bootstrap Grid, amelyiket jónak látod.</li>
+            <li>Az űrlap adatait POST request segítségével oldd meg!
+                A végeredmény tehát két weboldal, az egyiken megjelennek a turisztikai látványosságok adatait, 
+                a másikon pedig be lehet vinni új adatokat. A feladat megoldásának segítéséhez nézd át a legutóbbi órai példákat!</li>
+        </ol> 
+    </div>
+{% endblock section %}
