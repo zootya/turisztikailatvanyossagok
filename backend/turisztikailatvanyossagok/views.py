@@ -25,3 +25,24 @@ def kapcsolat(request):
         "email" : "level kardos zoltannak kukac gmail pont kom",
     }
     return render(request, "kapcsolat.html", {"kapcsolatiAdatok" : adatok })
+
+
+def ujOrszag(request):
+    if request.method == "GET":
+        form = OrszagForm()
+        ujorszagAdatok = Orszag.objects.all().order_by("orszagMegnevezes")
+        context = {
+            "ujorszag" : form, 
+            "ujorszagAdatok" : ujorszagAdatok,
+        }
+        return render(request, "ujorszag.html", context)
+
+
+    elif request.method == "POST":
+        form = OrszagForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("ujorszag")
+        else:
+            message = "Az adatok nem felelnek meg, nincs tárolás !"
+            return render(request, "data-error", {"error_message" : message })

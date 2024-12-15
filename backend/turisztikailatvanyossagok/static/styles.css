@@ -1,0 +1,29 @@
+body{
+    background-color: red;
+    background-color: cornflowerblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+th, tr {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.myadat {
+    color: #404040;
+}
+
+.ujadatlink {
+    color: black;
+}
+
+.torles {
+    color: white;
+}
+
+.modosit {
+    color: white;
+}
