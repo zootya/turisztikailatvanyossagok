@@ -1,11 +1,21 @@
 from django.db import models
 from django.utils.timezone import now
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator, MinLengthValidator, MaxLengthValidator
 
 # Create your models here.
 
 class Orszag(models.Model):
-    orszagMegnevezes = models.CharField(max_length=100)
+    orszagMegnevezes = models.CharField(
+        max_length=100, 
+        null=False, 
+        blank=False,      
+        unique=True,
+        validators = [
+                    MinLengthValidator(4, message = "Túl rövid országnévnek. (min:4)"),    # a legrövidebb 4 karakter pl Peru
+                    MaxLengthValidator(58, message = "Túl hosszú országnévnek. (max: 85)") # Világ leghosszabb nevű országa 58 karakter
+                                                                                           # 
+        ]
+    )
 
     def __str__(self):
         return self.orszagMegnevezes
@@ -14,14 +24,25 @@ class Orszag(models.Model):
 
     
 class Varos(models.Model):
-    varosMegnevezese = models.CharField(max_length=100)
-    orszag = models.ForeignKey("Orszag", on_delete=models.CASCADE)
+    varosMegnevezes = models.CharField(
+        max_length = 100,
+        null = False,
+        blank = False,
+        unique = True,
+        validators = [
+                    MinLengthValidator(3, message = "Túl rövid városnévnek. (min:4)"),    # a legrövidebb 3 karakter pl Ács
+                    MaxLengthValidator(85, message = "Túl hosszú városnévnek. (max: 85)") # Világ leghosszabb nevű városa 85 karakter
+                                                                                           # Taumatawhakatangihangakoauauotamateapokaiwhenuakitanatahu, Új-Zéland
+        ]
+        )
+    orszag = models.ForeignKey("Orszag", on_delete = models.CASCADE)
 
     def __str__(self):
         return self.varosMegnevezese
     class Meta:
         verbose_name_plural="Városok"
     
+
 class Latvanyossag(models.Model):
     latvanyossagMegnevezes = models.CharField(max_length=100)
     latvanyossagLeiras = models.TextField()

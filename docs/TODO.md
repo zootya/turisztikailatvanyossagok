@@ -14,3 +14,5 @@
 - [ ] felhasználói oldal létrehozása az adat beviteli ürlaphoz
 - [ ] programfejlesztői dokumentáció elkészítése
 - [ ] működésének műszaki feltételeit és használatának rövid bemutatását tartalmazó dokumentáció elkészítése a felhasználók részére
+
+- [ ] ujvaros.html a select ország abc sorrendben jelenjen meg

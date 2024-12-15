@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from .models import Orszag, Varos, Latvanyossag
-from .forms import OrszagForm
+from .forms import OrszagForm, VarosForm
+
+from django.core.exceptions import ValidationError
 
 # Create your views here.
 
@@ -44,5 +46,28 @@ def ujOrszag(request):
             form.save()
             return redirect("ujorszag")
         else:
-            message = "Az adatok nem felelnek meg, nincs tárolás !"
-            return render(request, "data-error", {"error_message" : message })
+            #message = "Az adatok nem felelnek meg, nincs tárolás !"            
+            message = form.errors
+            return render(request, "data-error.html", {"error_message" : message })
+
+
+def ujVaros(request):
+    if request.method == "GET":
+        form = VarosForm()
+        ujvarosAdatok = Varos.objects.all().order_by("varosMegnevezes")
+        context = {
+            "ujvaros" : form, 
+            "ujvarosAdatok" : ujvarosAdatok,
+        }
+        return render(request, "ujvaros.html", context)
+
+
+    elif request.method == "POST":
+        form = VarosForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("ujvaros")
+        else:
+            #message = "Az adatok nem felelnek meg, nincs tárolás !"
+            message = form.errors
+            return render(request, "data-error.html", {"error_message" : message })
