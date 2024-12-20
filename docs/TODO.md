@@ -5,9 +5,9 @@
 - [x] külső ip címről elérhető legyen
 - [x] modell kialakítása, normalizálása
 - [x] szerver oldali adatbevitelhez template, forms elkészítése
-- [ ] serializer létrehozása
-- [ ] GET API végpont elkészítése
-- [ ] POST API végpont elkészítése
+- [x] serializer létrehozása
+- [x] GET API végpont elkészítése
+- [x] POST API végpont elkészítése
 - [ ] local fejlesztői környezet Vite létrehozása a felhasználói felülethez
 - [ ] Vite szerver beállítása egy Docker konténerbe
 - [ ] felhasználói főoldal létrehozása az adatok megjelenítésére

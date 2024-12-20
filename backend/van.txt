@@ -1,0 +1,6 @@
+latvanyossagMegnevezes : _latvanyossagMegnevezese,
+latvanyossagLeiras : _latvanyossagLeiras,
+nyitvatartas : _nyitvatartas,
+kepUrl : _kepUrl,
+varos : _varos,
+ertekeles : _ertekeles,

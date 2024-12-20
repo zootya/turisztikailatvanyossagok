@@ -72,15 +72,18 @@ def ujVaros(request):
             return render(request, "data-error.html", {"error_message" : message })
 
 
-@api_view(["GET"])
+@api_view(["GET", "POST"])
 def latvany(request):
     if request.method == "GET":
+        print("A GET látványba lépett")
         allLatvany = Latvanyossag.objects.all().order_by("latvanyossagMegnevezes")
         serialized = LatvanyossagSelializer(allLatvany, many = True )
         return Response(serialized.data)
+    
     if request.method == "POST":
         serialized = LatvanyossagSelializer(data = request.data)
         if serialized.is_valid():
             serialized.save()
             return Response(serialized.data, status = status.HTTP_201_CREATED)
+        return Response(serialized.errors, status = status.HTTP_400_BAD_REQUEST)
     
