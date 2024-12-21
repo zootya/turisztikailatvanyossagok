@@ -17,3 +17,4 @@
 
 ## Secondary TODO List
 - [ ] ujvaros.html a select ország abc sorrendben jelenjen meg
+- [ ] szavazás funkció
