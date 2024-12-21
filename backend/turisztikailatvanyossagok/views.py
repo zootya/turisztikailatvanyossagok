@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Orszag, Varos, Latvanyossag
 from .forms import OrszagForm, VarosForm
-from .serializers import LatvanyossagSelializer
+from .serializers import LatvanyossagSelializerPost, LatvanyossagSelializerGet, VarosSerializer
 
 
 # Create your views here.
@@ -73,17 +73,22 @@ def ujVaros(request):
 
 
 @api_view(["GET", "POST"])
-def latvany(request):
+def attrakcio(request):
     if request.method == "GET":
-        print("A GET látványba lépett")
         allLatvany = Latvanyossag.objects.all().order_by("latvanyossagMegnevezes")
-        serialized = LatvanyossagSelializer(allLatvany, many = True )
+        serialized = LatvanyossagSelializerGet(allLatvany, many = True )
         return Response(serialized.data)
     
     if request.method == "POST":
-        serialized = LatvanyossagSelializer(data = request.data)
+        serialized = LatvanyossagSelializerPost(data = request.data)
         if serialized.is_valid():
             serialized.save()
             return Response(serialized.data, status = status.HTTP_201_CREATED)
         return Response(serialized.errors, status = status.HTTP_400_BAD_REQUEST)
-    
+
+@api_view(["GET"])
+def getvarosok(request):
+    if request.method == "GET":
+        allVaros = Varos.objects.all().order_by("varosMegnevezes")
+        serialized = VarosSerializer(allVaros, many = True)
+        return Response(serialized.data)

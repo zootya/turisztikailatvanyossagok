@@ -38,13 +38,13 @@ class Varos(models.Model):
     orszag = models.ForeignKey("Orszag", on_delete = models.CASCADE)
 
     def __str__(self):
-        return self.varosMegnevezese
+        return self.varosMegnevezes
     class Meta:
         verbose_name_plural="Városok"
     
 
 class Latvanyossag(models.Model):
-    latvanyossagMegnevezes = models.CharField(max_length=100)
+    latvanyossagMegnevezes = models.CharField(max_length=500)
     latvanyossagLeiras = models.TextField()
     ertekeles = models.IntegerField(
         default = 0 ,
@@ -53,11 +53,32 @@ class Latvanyossag(models.Model):
             MaxValueValidator(5)
         ]
     )
-    nyitvatartas = models.CharField(max_length=100)
-    kepUrl = models.CharField(max_length=100)
+    nyitvatartas = models.CharField(max_length=200)
+    kepUrl = models.CharField(max_length=500)
     varos = models.ForeignKey("Varos", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.latvanyossagMegnevezes
     class Meta:
         verbose_name_plural="Látványosságok"
+
+
+class Iranyitoszam(models.Model):
+    megnevezes = models.CharField(
+        max_length = 500,
+        null = False,
+        blank = False,
+    )
+    irsz = models.IntegerField(
+        null = False,
+        blank = False,
+        validators=[
+            MinValueValidator(1000),
+            MaxValueValidator(9999)
+        ]
+    )
+        
+    def __str__(self):
+        return self.irsz
+    class Meta:
+        verbose_name_plural="Irányítószám"

@@ -16,6 +16,8 @@
         <h3>Beküldendő Put</h3>
 
     </div>
+
+    <div class = "container">
         <form action="javascript:addLatvany()" method = "POST">
             <p>
                 <label>
@@ -31,7 +33,10 @@
                     Kép url-je: <input type="text" name="kepUrl" id="kepUrl">
                 </label><br>
                 <label>
-                    Város: <input type="text" name="varos" id="varos">
+                    Város: 
+                    <select name="varos" id="varos">
+                        <option value=""></option>
+                    </select>
                 </label><br>
                 <label>
                     Értékelés: <input type="text" name="csillag" id="csillag">
@@ -40,8 +45,9 @@
 
                 <input type="submit" value="Elküldés">
             </p>
-
         </form>
+        <div id = "result"></div>
+    </div>
 
     <div class = "container">
         <div class = "row" id = "fetchResult"></div>

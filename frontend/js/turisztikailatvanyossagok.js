@@ -1,6 +1,8 @@
+const myUrl = "http://127.0.0.1:8000";
 
 function getTurisztikaiLatvanyossagok(){
-    fetch("http://127.0.0.1:8000/latvany/").then(res=>res.json()).then(result=>{
+    fetch(`${myUrl}/attrakcio`).then(res=>res.json()).then(result=>{
+    //fetch(`${myUrl}/latvany/`).then(res=>res.json()).then(result=>{
         result.forEach(item => {
             document.querySelector("#fetchResult").innerHTML +=
             `
@@ -9,6 +11,7 @@ function getTurisztikaiLatvanyossagok(){
                     <div class = "card-body">
                         <h4 class = card-title>${item.latvanyossagMegnevezes}</h4>
                         <p class = "card-text">${item.latvanyossagLeiras}</p>
+                        <p class = "card-text">${item.varos.varosMegnevezes} - ${item.varos.orszag.orszagMegnevezes}</p>
                         
                         <a href = "#" class = "btn btn-primary">Elküldés </a>
                     </div>
@@ -18,6 +21,19 @@ function getTurisztikaiLatvanyossagok(){
         });
     })
 }
+
+
+function getVarosok(){
+    fetch(`${myUrl}/varoslist`).then(res => res.json()).then(result =>{
+        result.forEach(item => {
+            document.querySelector("#varos").innerHTML +=
+            `
+            <option value = "${item.id}">${item.varosMegnevezes} - ${item.orszag.orszagMegnevezes}</option>
+            `;
+        });
+    })
+}
+
 
 function addLatvany(){
     const _latvanyossagMegnevezese = document.querySelector("#megnevezes").value;
@@ -38,18 +54,31 @@ function addLatvany(){
 
     console.log(JSON.stringify(adat));
 
-    fetch("http://127.0.0.1:8000/latvany/", 
+    fetch(`${myUrl}/attrakcio`, 
+    //fetch(`${myUrl}/latvany/`, 
         {
             method : "POST",
             headers : {
                 'Content-Type' : 'application/json'
             },
             body : JSON.stringify(adat),
-    //}).then(response => response.json()).then( data => {
-    //    console.log('Succes:', data);
-    //}).catch((error) => {
-    //    console.error('Error:', error);
+        }).then(response => response.json()).then( data => {
+            console.log('Succes:', data);
+            document.querySelector("#result").innerHTML = `
+                <p class = "text-bg-success">Adatok rögzítve: ${data["latvanyossagMegnevezes"]}</p>
+            `;
+            }).catch((error) => {
+            console.error('Error:', error);
+            document.querySelector("#result").innerHTML = `
+                <p class = "text-bg-warning">Error ${error}</p>
+            `;
         });
+
+
+    setTimeout(() => {
+        window.location.href = "index.html"
+    }, 3000);
 }
 
+getVarosok()
 getTurisztikaiLatvanyossagok()
