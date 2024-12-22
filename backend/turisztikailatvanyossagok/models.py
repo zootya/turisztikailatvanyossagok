@@ -79,6 +79,28 @@ class Iranyitoszam(models.Model):
     )
         
     def __str__(self):
-        return self.irsz
+        #return self.irsz
+        return self.megnevezes
     class Meta:
-        verbose_name_plural="Irányítószám"
+        verbose_name_plural = "Irányítószám"
+
+
+class Ertekeles(models.Model):
+    ertekeles = models.IntegerField(
+        default = 0 ,
+        validators = [
+            MinValueValidator(0),
+            MaxValueValidator(5)
+        ]
+    )
+    velemeny = models.TextField()
+    pozitiv = models.TextField()
+    negativ = models.TextField()
+    iranyitoszam = models.ForeignKey("Iranyitoszam", on_delete=models.CASCADE)
+    varos = models.ForeignKey("Varos", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.ertekeles
+    class Meta:
+        verbose_name_plural = "Értékelés"
+    
