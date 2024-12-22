@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Latvanyossag, Varos
+from .models import Latvanyossag, Varos, Ertekeles
 
 class LatvanyossagSelializerPost(serializers.ModelSerializer):
     class Meta:
@@ -16,4 +16,9 @@ class VarosSerializer(serializers.ModelSerializer):
     class Meta:
         model = Varos
         depth = 1
+        fields = "__all__"
+
+class ErtekelesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ertekeles
         fields = "__all__"

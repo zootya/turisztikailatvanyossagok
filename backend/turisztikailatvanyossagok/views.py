@@ -4,9 +4,9 @@ from django.template import loader
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Orszag, Varos, Latvanyossag
+from .models import Orszag, Varos, Latvanyossag, Iranyitoszam
 from .forms import OrszagForm, VarosForm
-from .serializers import LatvanyossagSelializerPost, LatvanyossagSelializerGet, VarosSerializer
+from .serializers import LatvanyossagSelializerPost, LatvanyossagSelializerGet, VarosSerializer, ErtekelesSerializer
 
 
 # Create your views here.
@@ -86,9 +86,34 @@ def attrakcio(request):
             return Response(serialized.data, status = status.HTTP_201_CREATED)
         return Response(serialized.errors, status = status.HTTP_400_BAD_REQUEST)
 
+
 @api_view(["GET"])
 def getvarosok(request):
     if request.method == "GET":
         allVaros = Varos.objects.all().order_by("varosMegnevezes")
         serialized = VarosSerializer(allVaros, many = True)
         return Response(serialized.data)
+
+
+@api_view(["GET"])
+def getegyattrakcio(request):
+    if request.method == "GET":
+        _id = request.GET.get("id")
+        #print('Ezt kértem: {_id}')
+        print('Ezt kértem: ')
+        print(_id)
+        
+        egyattrakcio = Latvanyossag.objects.get(pk = _id)
+        serialized = LatvanyossagSelializerGet(egyattrakcio)
+        return Response(serialized.data)
+    
+
+@api_view(["POST"])
+def ertekeles(request):
+    if request.method == "POST":
+        serialized = ErtekelesSerializer(data = request.data)
+        if serialized.is_valid():
+            serialized.save()
+            return Response(serialized.data, status = status.HTTP_201_CREATED)
+        return Response(serialized.errors, status = status.HTTP_400_BAD_REQUEST)
+

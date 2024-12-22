@@ -67,19 +67,18 @@ class Iranyitoszam(models.Model):
     megnevezes = models.CharField(
         max_length = 500,
         null = False,
-        blank = False,
+        blank = False
     )
     irsz = models.IntegerField(
         null = False,
         blank = False,
-        validators=[
+        validators = [
             MinValueValidator(1000),
             MaxValueValidator(9999)
         ]
     )
         
     def __str__(self):
-        #return self.irsz
         return self.megnevezes
     class Meta:
         verbose_name_plural = "Irányítószám"
@@ -96,11 +95,19 @@ class Ertekeles(models.Model):
     velemeny = models.TextField()
     pozitiv = models.TextField()
     negativ = models.TextField()
-    iranyitoszam = models.ForeignKey("Iranyitoszam", on_delete=models.CASCADE)
-    varos = models.ForeignKey("Varos", on_delete=models.CASCADE)
+    iranyitoszam = models.IntegerField(
+        default = 1000,
+        null = False,
+        blank = False,
+        validators = [
+            MinValueValidator(1000),
+            MaxValueValidator(9999)
+        ]
+    )
+    attrakcio = models.ForeignKey("Varos", on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.ertekeles
+        return self.varos
     class Meta:
         verbose_name_plural = "Értékelés"
     

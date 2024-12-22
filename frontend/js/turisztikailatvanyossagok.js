@@ -2,7 +2,6 @@ const myUrl = "http://127.0.0.1:8000";
 
 function getTurisztikaiLatvanyossagok(){
     fetch(`${myUrl}/attrakcio`).then(res=>res.json()).then(result=>{
-    //fetch(`${myUrl}/latvany/`).then(res=>res.json()).then(result=>{
         result.forEach(item => {
             document.querySelector("#fetchResult").innerHTML +=
             `
@@ -13,7 +12,7 @@ function getTurisztikaiLatvanyossagok(){
                         <p class = "card-text">${item.latvanyossagLeiras}</p>
                         <p class = "card-text">${item.varos.varosMegnevezes} - ${item.varos.orszag.orszagMegnevezes}</p>
                         
-                        <a href = "#" class = "btn btn-primary">Elküldés </a>
+                        <a href = "ertekeles.html?id=${item.id}" class = "btn btn-primary">Értékelés</a>
                     </div>
                 </div> 
             </div>
@@ -55,7 +54,6 @@ function addLatvany(){
     console.log(JSON.stringify(adat));
 
     fetch(`${myUrl}/attrakcio`, 
-    //fetch(`${myUrl}/latvany/`, 
         {
             method : "POST",
             headers : {
@@ -75,10 +73,13 @@ function addLatvany(){
         });
 
 
+
     setTimeout(() => {
         window.location.href = "index.html"
     }, 3000);
+    
 }
+
 
 getVarosok()
 getTurisztikaiLatvanyossagok()
