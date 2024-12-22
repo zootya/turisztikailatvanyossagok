@@ -46,13 +46,6 @@ class Varos(models.Model):
 class Latvanyossag(models.Model):
     latvanyossagMegnevezes = models.CharField(max_length=500)
     latvanyossagLeiras = models.TextField()
-    ertekeles = models.IntegerField(
-        default = 0 ,
-        validators = [
-            MinValueValidator(0),
-            MaxValueValidator(5)
-        ]
-    )
     nyitvatartas = models.CharField(max_length=200)
     kepUrl = models.CharField(max_length=500)
     varos = models.ForeignKey("Varos", on_delete=models.CASCADE)
@@ -93,8 +86,9 @@ class Ertekeles(models.Model):
         ]
     )
     velemeny = models.TextField()
-    pozitiv = models.TextField()
-    negativ = models.TextField()
+    pozitiv = models.TextField(blank = True)
+    negativ = models.TextField(blank = True)
+    ertekelo = models.CharField(max_length=100)
     iranyitoszam = models.IntegerField(
         default = 1000,
         null = False,

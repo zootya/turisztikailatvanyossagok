@@ -40,15 +40,13 @@ function addLatvany(){
     const _nyitvatartas = document.querySelector("#nyitvatartas").value;
     const _kepUrl = document.querySelector("#kepUrl").value;
     const _varos = document.querySelector("#varos").value;
-    const _ertekeles = document.querySelector("#csillag").value;
 
     const adat = {
         latvanyossagMegnevezes : _latvanyossagMegnevezese,
         latvanyossagLeiras : _latvanyossagLeiras,
-        ertekeles : _ertekeles,
         nyitvatartas : _nyitvatartas,
         kepUrl : _kepUrl,
-        varos : _varos
+        varos : _varos,
     };
 
     console.log(JSON.stringify(adat));

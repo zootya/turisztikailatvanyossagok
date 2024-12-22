@@ -20,6 +20,7 @@ function addErtekeles(){
     const _velemeny = document.querySelector("#velemeny").value;
     const _pozitiv = document.querySelector("#elonyok").value;
     const _negativ = document.querySelector("#hatranyok").value;
+    const _ertekelo = document.querySelector("#ertekelo").value;
     const _iranyitoszam = document.querySelector("#iranyitoszam").value;
     const _latvanyossag_id = document.querySelector("#latvanyossag_id").value;
 
@@ -28,8 +29,9 @@ function addErtekeles(){
         velemeny : _velemeny,
         pozitiv : _pozitiv,
         negativ : _negativ,
+        ertekelo : _ertekelo,
         iranyitoszam : _iranyitoszam,
-        attrakcio : _latvanyossag_id
+        attrakcio : _latvanyossag_id,
     };
 
     console.log(JSON.stringify(adat));
@@ -54,9 +56,9 @@ function addErtekeles(){
         });
 
 
-//    setTimeout(() => {
-//        window.location.href = "index.html"
-//    }, 3000);
+    setTimeout(() => {
+        window.location.href = "index.html"
+    }, 3000);
     
 }
 

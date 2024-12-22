@@ -20,28 +20,27 @@
     <div class = "container">
         <form action="javascript:addLatvany()" method = "POST">
             <p>
-                <label>
-                    Látványosság megnevezése: <input type="text" name="megnevezes" id="megnevezes">
-                </label><br>
-                <label>
-                    Látványosság leírása: <textarea name="leiras" id="leiras"></textarea>
-                </label><br>
-                <label>
-                    Nyítvatartás: <input type="text" name="nyitvatartas" id="nyitvatartas">
-                </label><br>
-                <label>
-                    Kép url-je: <input type="text" name="kepUrl" id="kepUrl">
-                </label><br>
-                <label>
-                    Város: 
+                <label for = "megnevezes">Látványosság megnevezése: </label>
+                <input type="text" name="megnevezes" id="megnevezes">
+                <br>
+                
+                <label for="leiras">Látványosság leírása:</label>
+                <textarea name="leiras" id="leiras"></textarea>
+                <br>
+                
+                <label for="nyitvatartas">Nyítvatartás:</label>
+                <input type="text" name="nyitvatartas" id="nyitvatartas">
+                <br>
+                
+                <label for="kepUrl">Kép url-je:</label>
+                <input type="text" name="kepUrl" id="kepUrl">
+                <br>
+                
+                <label for="varos">Város:</label> 
                     <select name="varos" id="varos">
                         <option value=""></option>
                     </select>
-                </label><br>
-                <label>
-                    Értékelés: <input type="text" name="csillag" id="csillag">
-                </label><br>
-
+                <br>
 
                 <input type="submit" value="Elküldés">
             </p>
