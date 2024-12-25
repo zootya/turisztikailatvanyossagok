@@ -8,8 +8,8 @@
 - [x] serializer létrehozása
 - [x] GET API végpont elkészítése
 - [x] POST API végpont elkészítése
-- [ ] local fejlesztői környezet Vite létrehozása a felhasználói felülethez
-- [ ] Vite szerver beállítása egy Docker konténerbe
+- [x] local fejlesztői környezet Vite létrehozása a felhasználói felülethez
+- [x] Vite szerver beállítása egy Docker konténerbe
 - [ ] felhasználói főoldal létrehozása az adatok megjelenítésére
 - [ ] felhasználói oldal létrehozása az adat beviteli ürlaphoz
 - [ ] programfejlesztői dokumentáció elkészítése

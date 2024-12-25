@@ -10,9 +10,9 @@
 - Python 3.13.1
 - Django 5.1.4
 - Django REST framework 3.15.2
-- NodeJs
-- React
-- Vite
+- NodeJs 22.12.0
+- Vite 6.0.5
+- Docker 4.37.1
  
 
 ## 🚀 Hogyan kell használni
