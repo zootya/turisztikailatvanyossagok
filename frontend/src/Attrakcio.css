@@ -1,0 +1,15 @@
+.countainer{
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin:10px 10px 30px 10px;
+    height: auto;
+    background-color: blanchedalmond;
+}
+
+img{
+    border-radius: 10px;
+}
+
+.info{
+    border-radius: 10px;
+}

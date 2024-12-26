@@ -4,6 +4,8 @@
 - [x] Django szerver beállítása a Docker konténerbe
 - [x] külső ip címről elérhető legyen
 - [x] modell kialakítása, normalizálása
+- [x] az adatbázis, adatbázismodell-diagramjának dokumnetációját elkészíteni,
+- [ ] az adatbázis export fájlját (dump) elkészíteni,
 - [x] szerver oldali adatbevitelhez template, forms elkészítése
 - [x] serializer létrehozása
 - [x] GET API végpont elkészítése
