@@ -22,4 +22,4 @@
 - [x] szavazás funkció
 - [x] "új ország rögzítése" kinézete illeszkedjen a listázással
 - [x] "új város rögzítése" kinézete illeszkedjen a listázással
-- [ ] vélemények menü, vélemények liszázása megvalósítása
+- [ ] vélemények menü, vélemények listázása megvalósítása
