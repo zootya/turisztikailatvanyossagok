@@ -13,7 +13,7 @@
 - [x] local fejlesztői környezet Vite létrehozása a felhasználói felülethez
 - [x] Vite szerver beállítása egy Docker konténerbe
 - [x] felhasználói főoldal létrehozása az adatok megjelenítésére
-- [ ] felhasználói oldal létrehozása az adat beviteli ürlaphoz
+- [x] felhasználói oldal létrehozása az adat beviteli ürlaphoz
 - [ ] programfejlesztői dokumentáció elkészítése
 - [ ] működésének műszaki feltételeit és használatának rövid bemutatását tartalmazó dokumentáció elkészítése a felhasználók részére
 
@@ -22,3 +22,4 @@
 - [x] szavazás funkció
 - [x] "új ország rögzítése" kinézete illeszkedjen a liszázással
 - [x] "új város rögzítése" kinézete illeszkedjen a liszázással
+- [ ] vélemények menü, vélemények liszázása megvalósítása
