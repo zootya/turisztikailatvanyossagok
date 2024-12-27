@@ -20,3 +20,5 @@
 ## Secondary TODO List
 - [ ] ujvaros.html a select ország abc sorrendben jelenjen meg
 - [x] szavazás funkció
+- [x] "új ország rögzítése" kinézete illeszkedjen a liszázással
+- [x] "új város rögzítése" kinézete illeszkedjen a liszázással

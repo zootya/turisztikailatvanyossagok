@@ -27,3 +27,11 @@ th, tr {
 .modosit {
     color: white;
 }
+
+.container{
+    border: 0.1em solid #f27317;
+    border-radius: 10px;
+    margin: 0.7em;
+    height: auto;
+    background-color: blanchedalmond;
+}

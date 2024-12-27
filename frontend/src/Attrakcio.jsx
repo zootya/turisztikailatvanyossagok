@@ -15,7 +15,7 @@ function Attrakcio(props) {
                         </div>
                         <div>
                             <a href={"http://127.0.0.1:3000/ertekeles.html?id=" + props.ertekelesLink} class="btn btn-primary m-2">Értékelés</a>
-                            <a href={"http://127.0.0.1:3000/ertekeleslistazasa.html?id=" + props.ertekelesLink} class="btn btn-warning m-2">Vélemények</a>
+                            <a href={"http://127.0.0.1:3000/velemenyek.html?id=" + props.ertekelesLink} class="btn btn-warning m-2">Vélemények</a>
                         </div>
                     </div>
                 </div>

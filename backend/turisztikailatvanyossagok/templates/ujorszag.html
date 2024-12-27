@@ -2,22 +2,22 @@
 
 {% block section %}
 
-    <form class="bg-warning mb-5 mt-5 p-3" method="POST">
+    <form class="bg-body-secondary mb-3 mt-3 p-3 rounded-3 border" method="POST">
         {% csrf_token%}
         {{ ujorszag.as_p }}
         <input type="submit" class="btn btn-success m-4" value="Rögzítés">
     </form>
  
-    <div class="container">
+    <div>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
             {% for adat in ujorszagAdatok %}
             <div class="col">
-                <div class="p-3 border bg-light">
+                <div class="p-3 border bg-body-secondary rounded-3">
                     <div class="myadat">{{ adat.orszagMegnevezes }}</div>
                 </div>
             </div>
             {% endfor%}
         </div>
     </div>
-
+    <br>
 {% endblock section %}
