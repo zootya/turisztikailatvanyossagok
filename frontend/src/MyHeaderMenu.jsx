@@ -8,22 +8,28 @@ function MyHeaderMenu(){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="http://127.0.0.1:3000/">Listázás</a>
                         </li>
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Adatrögzítés 
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="http://127.0.0.1:8000/ujorszag/"><i class="bi bi-card-list"> - Új ország rögzítése</i></a></li>
+                                <li><a class="dropdown-item" href="http://127.0.0.1:3000/latvanyossagok.html"><i class="bi bi-bank"> - Új attrakció rögzítése</i></a></li>
                                 <li><hr class="dropdown-divider"/></li>
-                                <li><a class="dropdown-item" href="http://127.0.0.1:8000/ujvaros/"><i class="bi bi-card-list"> - Új város rögzítése</i></a></li>
+                                <li><a class="dropdown-item" href="http://127.0.0.1:8000/ujvaros/"><i class="bi bi-geo-alt"> - Új város rögzítése</i></a></li>
+                                <li><hr class="dropdown-divider"/></li>
+                                <li><a class="dropdown-item" href="http://127.0.0.1:8000/ujorszag/"><i class="bi bi-globe-europe-africa"> - Új ország rögzítése</i></a></li>
                             </ul>
                         </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="http://127.0.0.1:8000/feladat/">Feladatmeghatározás</a>
                         </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="http://127.0.0.1:8000/kapcsolat/" >Kapcsolat</a>
                         </li>

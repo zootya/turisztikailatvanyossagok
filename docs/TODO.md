@@ -12,7 +12,7 @@
 - [x] POST API végpont elkészítése
 - [x] local fejlesztői környezet Vite létrehozása a felhasználói felülethez
 - [x] Vite szerver beállítása egy Docker konténerbe
-- [ ] felhasználói főoldal létrehozása az adatok megjelenítésére
+- [x] felhasználói főoldal létrehozása az adatok megjelenítésére
 - [ ] felhasználói oldal létrehozása az adat beviteli ürlaphoz
 - [ ] programfejlesztői dokumentáció elkészítése
 - [ ] működésének műszaki feltételeit és használatának rövid bemutatását tartalmazó dokumentáció elkészítése a felhasználók részére
