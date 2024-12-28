@@ -4,10 +4,9 @@ from django.template import loader
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Orszag, Varos, Latvanyossag, Iranyitoszam
+from .models import Orszag, Varos, Latvanyossag, Ertekeles, Iranyitoszam
 from .forms import OrszagForm, VarosForm
-from .serializers import LatvanyossagSelializerPost, LatvanyossagSelializerGet, VarosSerializer, ErtekelesSerializer
-
+from .serializers import LatvanyossagSelializerPost, LatvanyossagSelializerGet, VarosSerializer, ErtekelesSerializer, ErtekelesSerializerGet
 
 # Create your views here.
 
@@ -28,6 +27,7 @@ def kapcsolat(request):
     adatok = {
         "nev" : "Kardos Zoltán",
         "email" : "level kardos zoltannak kukac gmail pont kom",
+        "github" : "https://github.com/zootya/turisztikailatvanyossagok",
     }
     return render(request, "kapcsolat.html", {"kapcsolatiAdatok" : adatok })
 
@@ -117,3 +117,12 @@ def ertekeles(request):
             return Response(serialized.data, status = status.HTTP_201_CREATED)
         return Response(serialized.errors, status = status.HTTP_400_BAD_REQUEST)
 
+
+@api_view(["GET"])
+def getegyertekeles(request):
+    if request.method == "GET":
+        _id = request.GET.get("id")
+
+        egyertekeles = Ertekeles.objects.all().filter(attrakcio_id = _id)
+        serialized = ErtekelesSerializerGet(egyertekeles, many = True)
+        return Response(serialized.data)

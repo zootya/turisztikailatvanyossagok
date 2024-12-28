@@ -63,42 +63,17 @@
 
 
     <div class = "container">
-        <form action="javascript:addLatvany()" method = "POST">
-            
-            <div class="d-flex position-relative m-2">
+        <div class="d-flex position-relative m-2">
 
-                <div class = "info bg-body-secondary p-2 m-2">
-                    <div class="input row">
-                        <label for = "megnevezes">Látványosság megnevezése: </label>
-                        <input type="text" name="megnevezes" id="megnevezes">
-                        <br>
+            <div class = "row" id = "baloldal"></div>
 
-                        <label for="leiras">Látványosság leírása:</label>
-                        <textarea name="leiras" id="leiras"></textarea>
-                        <br>
-
-                        <label for="nyitvatartas">Nyítvatartás:</label>
-                        <input type="text" name="nyitvatartas" id="nyitvatartas">
-                        <br>
-
-                        <label for="kepUrl">Kép url-je:</label>
-                        <input type="text" name="kepUrl" id="kepUrl">
-                        <br>
-
-                        <label for="varos">Város:</label> 
-                            <select name="varos" id="varos">
-                                <option value=""></option>
-                            </select>
-                        <br>
-                    </div>
-                    <div id = "result"></div>
-                </div>
-                <div>
-                    <input type="submit" value="Elküldés" class="btn btn-success m-2">
-                </div>
+            <div class = "info bg-body-secondary p-2 m-2">
+                <div class="row" id="kozep"></div>
             </div>
 
-        </form>
+            <div id="jobboldal"></div>
+
+        </div>
     </div>
 
     <div class = "container">
@@ -108,10 +83,10 @@
 
     <br>
     <footer class="footer fixed-bottom bg-primary ps-4">
-        <span class="text-white">© Kardos Zoltán 14.EC</span>
+        <span class="text-white">© Kardos Zoltán 14.EC - v.:1.0.241229</span>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./js/turisztikailatvanyossagok.js"></script>
+    <script src="./js/velemenyek.js"></script>
 </body>
 </html>

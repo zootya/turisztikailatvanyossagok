@@ -14,12 +14,12 @@
 - [x] Vite szerver beállítása egy Docker konténerbe
 - [x] felhasználói főoldal létrehozása az adatok megjelenítésére
 - [x] felhasználói oldal létrehozása az adat beviteli ürlaphoz
-- [ ] programfejlesztői dokumentáció elkészítése
-- [ ] működésének műszaki feltételeit és használatának rövid bemutatását tartalmazó dokumentáció elkészítése a felhasználók részére
+- [x] programfejlesztői dokumentáció elkészítése
+- [x] működésének műszaki feltételeit és használatának rövid bemutatását tartalmazó felhasználói dokumentáció elkészítése
 
 ## Secondary TODO List
 - [ ] ujvaros.html a select ország abc sorrendben jelenjen meg
 - [x] szavazás funkció
 - [x] "új ország rögzítése" kinézete illeszkedjen a listázással
 - [x] "új város rögzítése" kinézete illeszkedjen a listázással
-- [ ] vélemények menü, vélemények listázása megvalósítása
+- [x] vélemények menü, vélemények listázása megvalósítása

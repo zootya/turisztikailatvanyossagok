@@ -12,6 +12,7 @@
 - Django REST framework 3.15.2
 - NodeJs 22.12.0
 - Vite 6.0.5
+- Bootstrap 5.3
 - Docker 4.37.1
  
 

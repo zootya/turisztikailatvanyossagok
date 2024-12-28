@@ -8,6 +8,7 @@ urlpatterns = [
     path('varoslist', views.getvarosok),
     path('egyattrakcio', views.getegyattrakcio),
     path('ertekeles', views.ertekeles),
+    path('egyertekeles', views.getegyertekeles),
 
     path('ujorszag/', views.ujOrszag, name="ujorszag"),
     path('ujvaros/', views.ujVaros, name="ujvaros"),
@@ -15,5 +16,4 @@ urlpatterns = [
     path('feladat/', views.feladat_views, name="feladat_name"),
     path('data-error/', views.dataError, name="data-error"),
     path('kapcsolat/', views.kapcsolat, name="kapcsolat"),
-
 ]
