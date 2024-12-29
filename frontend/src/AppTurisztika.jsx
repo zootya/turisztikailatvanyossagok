@@ -6,11 +6,13 @@ import Attrakcio from './Attrakcio.jsx'
 import { useEffect, useState } from 'react';
 
 function AppTurisztika() {
-    const myUrl = "http://127.0.0.1:8000";
+    //const myUrl = "http://127.0.0.1:8000";
+    const myUrl = "http://azenhazam.mywire.org";
+
     const [data, setdata] = useState([]);
 
     useEffect(() => {
-        fetch(myUrl+"/attrakcio")
+        fetch(myUrl+":8000/attrakcio")
         .then((response) => {response.json()
             .then((res) => {
                 setdata(res)

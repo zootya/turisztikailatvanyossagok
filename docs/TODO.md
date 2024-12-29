@@ -23,3 +23,5 @@
 - [x] "új ország rögzítése" kinézete illeszkedjen a listázással
 - [x] "új város rögzítése" kinézete illeszkedjen a listázással
 - [x] vélemények menü, vélemények listázása megvalósítása
+- [x] szerverek újrakonfigurálása a port forwarding miatt
+- [ ] kis méretű kijelzőkre optimalizálást kell elvégezni responziv design

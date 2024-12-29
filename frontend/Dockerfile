@@ -25,7 +25,7 @@ COPY . .
 #USER app
 
 # konténer portjának megadása
-EXPOSE 3000
+EXPOSE 8100
 
 # konténer indításakor futtatandó parancs
 CMD [ "npm", "run", "dev" ]

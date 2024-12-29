@@ -1,4 +1,5 @@
-const myUrl = "http://127.0.0.1:8000";
+//const myUrl = "http://127.0.0.1:8000";
+const myUrl = "http://azenhazam.mywire.org";
 
 function getTurisztikaiLatvanyossagEgy(){
     let s = window.location.search;
@@ -6,7 +7,7 @@ function getTurisztikaiLatvanyossagEgy(){
     let myUrlParams = new URLSearchParams(window.location.search)
     let szam = myUrlParams.get("id");
 
-    fetch(`${myUrl}/egyattrakcio?id=${szam}`).then(res=>res.json()).then(result=>{ 
+    fetch(`${myUrl}:8000/egyattrakcio?id=${szam}`).then(res=>res.json()).then(result=>{ 
         document.querySelector("#megnevezes").innerHTML = `<img src = "${result.kepUrl}" height = "200px"></img>`;
         document.querySelector("#megnevezes").innerHTML += result.latvanyossagMegnevezes;
         document.querySelector("#latvanyossag_id").value = result.id;
@@ -36,7 +37,7 @@ function addErtekeles(){
 
     console.log(JSON.stringify(adat));
 
-    fetch(`${myUrl}/ertekeles`, 
+    fetch(`${myUrl}:8000/ertekeles`, 
         {
             method : "POST",
             headers : {

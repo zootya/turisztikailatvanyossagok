@@ -1,7 +1,8 @@
-const myUrl = "http://127.0.0.1:8000";
+//const myUrl = "http://127.0.0.1:8000";
+const myUrl = "http://azenhazam.mywire.org";
 
 function getTurisztikaiLatvanyossagok(){
-    fetch(`${myUrl}/attrakcio`).then(res=>res.json()).then(result=>{
+    fetch(`${myUrl}:8000/attrakcio`).then(res=>res.json()).then(result=>{
         result.forEach(item => {
             document.querySelector("#fetchResult").innerHTML +=
             `
@@ -23,7 +24,7 @@ function getTurisztikaiLatvanyossagok(){
 
 
 function getVarosok(){
-    fetch(`${myUrl}/varoslist`).then(res => res.json()).then(result =>{
+    fetch(`${myUrl}:8000/varoslist`).then(res => res.json()).then(result =>{
         result.forEach(item => {
             document.querySelector("#varos").innerHTML +=
             `
@@ -51,7 +52,7 @@ function addLatvany(){
 
     console.log(JSON.stringify(adat));
 
-    fetch(`${myUrl}/attrakcio`, 
+    fetch(`${myUrl}:8000/attrakcio`, 
         {
             method : "POST",
             headers : {

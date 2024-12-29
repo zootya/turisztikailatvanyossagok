@@ -1,4 +1,5 @@
-const myUrl = "http://127.0.0.1:8000";
+//const myUrl = "http://127.0.0.1:8000";
+const myUrl = "http://azenhazam.mywire.org";
 
 
 function getVelemenyek(){
@@ -14,10 +15,18 @@ function getVelemenyek(){
     let ertekeles_4 = 0
     let ertekeles_5 = 0
 
-        
-    fetch(`${myUrl}/egyertekeles?id=${szam}`).then(res=>res.json()).then(result=>{
+    document.querySelector("#baloldal").innerHTML =
+    `<div>
+        Még nincs értékelés...
+    </div>`;
+
+    document.querySelector("#jobboldal").innerHTML =
+        `<div><a href="${myUrl}:8100/ertekeles.html?id=${szam}" class="btn btn-primary m-2">Értékelés</a></div>`;
+    
+
+    fetch(`${myUrl}:8000/egyertekeles?id=${szam}`).then(res=>res.json()).then(result=>{
         result.forEach(item => {
-       
+
             ertekelesDb ++;
             ertekelesOsszesen += item.ertekeles;
             item.ertekeles == 1 ? ertekeles_1 ++ : ertekeles_1;
@@ -43,9 +52,8 @@ function getVelemenyek(){
             </div>`;
             
             document.querySelector("#jobboldal").innerHTML =
-            `<div>
-                <a href="http://127.0.0.1:3000/ertekeles.html?id=${szam}" class="btn btn-primary m-2">Értékelés</a>
-            </div>`;
+//            `<div><a href="http://127.0.0.1:3000/ertekeles.html?id=${szam}" class="btn btn-primary m-2">Értékelés</a></div>`;
+            `<div><a href="${myUrl}:8100/ertekeles.html?id=${szam}" class="btn btn-primary m-2">Értékelés</a></div>`;
         
             document.querySelector("#fetchResult").innerHTML +=
             `<div class = "row">

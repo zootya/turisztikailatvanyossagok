@@ -1,5 +1,7 @@
 import './Attrakcio.css'
 
+const myUrl = "http://azenhazam.mywire.org";
+
 function Attrakcio(props) {
     return (<div>
         <div class = "countainer">
@@ -14,8 +16,12 @@ function Attrakcio(props) {
                             <h6 class = "cars-title">{props.varos} - {props.orszag}</h6>
                         </div>
                         <div>
-                            <a href={"http://127.0.0.1:3000/ertekeles.html?id=" + props.ertekelesLink} class="btn btn-primary m-2">Értékelés</a>
-                            <a href={"http://127.0.0.1:3000/velemenyek.html?id=" + props.ertekelesLink} class="btn btn-warning m-2">Vélemények</a>
+{/*
+                            <a href={"http://127.0.0.1:8100/ertekeles.html?id=" + props.ertekelesLink} class="btn btn-primary m-2">Értékelés</a>
+                            <a href={"http://127.0.0.1:8100/velemenyek.html?id=" + props.ertekelesLink} class="btn btn-warning m-2">Vélemények</a>
+ */}
+                            <a href={myUrl+":8100/ertekeles.html?id=" + props.ertekelesLink} class="btn btn-primary m-2">Értékelés</a>
+                            <a href={myUrl+":8100/velemenyek.html?id=" + props.ertekelesLink} class="btn btn-warning m-2">Vélemények</a>
                         </div>
                     </div>
                 </div>
