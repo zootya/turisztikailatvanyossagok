@@ -1,5 +1,5 @@
 
- <h1 align="center">Túrisztikai látványosságok</h1>
+ <h1 align="center">Turisztikai látványosságok</h1>
  Backend 2. beadandó feladat
 
 Üdvözlök mindenkit az oldalon. Ennek a projektnek a célja, hogy eleget tegyek a Debreceni SZC Mechwart András Gépipari és Informatikai Technikum 2023/24 14EC "Backend 2. beadandó feladat" -nak.
